@@ -167,6 +167,24 @@ src/
 ---
 
 ## Screenshots
+Login Page
+
+<img width="1917" height="870" alt="image" src="https://github.com/user-attachments/assets/22cb6306-cc6d-4b16-bfe2-e24fd2859d63" />
+
+Register Page
+
+<img width="1913" height="876" alt="image" src="https://github.com/user-attachments/assets/ae03a623-cc4b-4669-851a-86a3457df811" />
+
+**Dashboad**
+---
+Admin page
+
+<img width="1919" height="871" alt="image" src="https://github.com/user-attachments/assets/d6a4a17e-ab10-4d6e-8134-5f73e5098913" />
+
+Non-admin page
+<img width="1915" height="888" alt="image" src="https://github.com/user-attachments/assets/7eaa3e12-f0da-485d-b562-2bdb26f542c4" />
+
+
 <!-- Add screenshots of login, dashboard, etc. here -->
 
 ---
