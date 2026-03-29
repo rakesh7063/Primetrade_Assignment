@@ -88,11 +88,29 @@ A full-stack web application for task management with role-based authentication.
 - **User**: id, username, password (hashed), role
 - **Task**: id, title, description, createdBy
 
+### Swagger Documention
+```http://localhost:8080/swagger-ui/index.html#/```
+
+<img width="1919" height="882" alt="image" src="https://github.com/user-attachments/assets/5742a119-446d-4b2b-a7fa-e87b3c4da95a" />
+
+
 ---
 
-## Frontend (React)
 
-### Project Structure
+## Project Structure
+## Backend (Spring Boot)
+```
+com.primetrade
+ ├── controller
+ ├── service
+ ├── repository
+ ├── entity
+ ├── dto
+ ├── config
+ └── exception
+```
+
+### Frontend (React)
 ```
 src/
 	App.jsx
@@ -179,10 +197,12 @@ Register Page
 ---
 Admin page
 
-<img width="1919" height="871" alt="image" src="https://github.com/user-attachments/assets/d6a4a17e-ab10-4d6e-8134-5f73e5098913" />
+<img width="1911" height="870" alt="image" src="https://github.com/user-attachments/assets/d11ede0a-ab9a-4875-aadc-8cc0700f012f" />
+
 
 Non-admin page
-<img width="1915" height="888" alt="image" src="https://github.com/user-attachments/assets/7eaa3e12-f0da-485d-b562-2bdb26f542c4" />
+<img width="1919" height="875" alt="image" src="https://github.com/user-attachments/assets/e9e90085-10d3-4640-b4a2-72f09cf03cdf" />
+
 
 
 <!-- Add screenshots of login, dashboard, etc. here -->
@@ -194,6 +214,4 @@ MIT
 
 ---
 
-## Notes
-- For any backend-specific questions (e.g., DB schema, advanced API usage), please provide details or ask!
-- This README covers both frontend and backend flows for a full-stack assignment.
+
