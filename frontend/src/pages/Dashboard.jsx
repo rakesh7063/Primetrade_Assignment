@@ -17,7 +17,7 @@ const Dashboard = () => {
     const fetchItems = async () => {
       setLoading(true);
       try {
-        const res = await apiFetch('/tasks', {
+        const res = await apiFetch('/tasks/v1', {
           method: 'GET'
         }, token);
         const data = await res.json();
@@ -29,11 +29,11 @@ const Dashboard = () => {
     fetchItems();
   }, [token]);
 
-console.log(items);
+
   // Admin CRUD handlers
   const handleAdd = async () => {
     if (!newTitle || !newDescription) return;
-    const res = await apiFetch('/tasks', {
+    const res = await apiFetch('/tasks/v1', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
@@ -55,7 +55,7 @@ console.log(items);
   };
 
   const handleUpdate = async (id) => {
-    const res = await apiFetch(`/tasks/${id}`, {
+    const res = await apiFetch(`/tasks/v1/${id}`, {
       method: 'PUT',
       headers: {
         'Content-Type': 'application/json'
@@ -71,7 +71,7 @@ console.log(items);
   };
 
   const handleDelete = async (id) => {
-    const res = await apiFetch(`/tasks/${id}`, {
+    const res = await apiFetch(`/tasks/v1/${id}`, {
       method: 'DELETE'
     }, token);
     if (res.ok) {
@@ -84,6 +84,9 @@ console.log(items);
   return (
     <div className="dashboard-container">
       <h2>Dashboard</h2>
+      <div style={{ marginBottom: '16px', fontWeight: 500 }}>
+        Welcome, {user?.username} ({user?.role})
+      </div>
       {user?.role === 'ADMIN' && (
         <form className="add-item add-task-form" onSubmit={e => {e.preventDefault(); handleAdd();}}>
           <input

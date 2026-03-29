@@ -12,6 +12,7 @@ const Navbar = () => {
     navigate('/login');
   };
 
+ 
   return (
     <nav className="navbar">
       <div className="navbar-left">
@@ -20,7 +21,13 @@ const Navbar = () => {
       <div className="navbar-right">
         <Link to="/dashboard" className={location.pathname === '/dashboard' ? 'active' : ''}>Dashboard</Link>
         {user ? (
-          <button onClick={handleLogout}>Logout</button>
+          <>
+            <span style={{ marginRight: '16px', fontWeight: 500 }}>
+              
+              {user.username} ({user.role})
+            </span>
+            <button onClick={handleLogout}>Logout</button>
+          </>
         ) : (
           <>
             <Link to="/login" className={location.pathname === '/login' ? 'active' : ''}>Login</Link>

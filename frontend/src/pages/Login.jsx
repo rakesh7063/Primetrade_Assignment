@@ -24,7 +24,8 @@ const Login = () => {
         data = await res.json();
       } catch {}
       if (res.ok && data.token) {
-        login({username: data.username, role: data.role}, data.token);
+       
+        login({username: data.userName, role: data.role}, data.token);
         navigate('/dashboard');
       } else if (!res.ok && data.message) {
         setError(data.message || 'Login failed');
